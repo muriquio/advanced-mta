@@ -5,34 +5,24 @@ exports.run = (client, message, args) => {
   
   Gamedig.query({
     type: "mtasa",
-    host: "46.105.145.146"  //Buraya Sunucunuzun İP GİRİN
+    host: "your ip here example: mtasa://213.226.119.31:22003"  
   })
     .then(state => {
-      const CodAre = new Discord.MessageEmbed()
-        .setColor("0x40ff00")
-        .setTitle("Oyuncu Sayıları")
-        .setDescription("Aşağıda CLİPABİ'ın oyuncu sayılarını görüyorsunuz.")
+      const advmuqio = new Discord.MessageEmbed()
+        .setColor("#")
+        .setTitle("Rich RolePlay User Count")
+        .setDescription("Rich RolePlay User Count Like;")
 
-        .addField("CLİP roleplay","Aktif Oyuncu : " + state.raw.numplayers + "\n" + "IP : 46.105.145.146")//Burayada girin
+        .addField("" + state.raw.numplayers + "\n" + "Rich RolePlay İP : mtasa://213.226.119.31:22003")
       
       	.setTimestamp()
-	      .setFooter("Toplam " + state.raw.numplayers +  " oyuncu aktif" , "https://cdn.discordapp.com/avatars/902254996324773979/9a815114cf5d926a75781e2f8ecd84c0.png?size=80");
+	      .setFooter("https://www.google.com/url?sa=i&url=https%3A%2F%2Fvk.com%2Frp.rich&psig=AOvVaw3ypEuEH1dN5NI3j0lpXXyr&ust=1638025013617000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPCF8-qktvQCFQAAAAAdAAAAABAD");
 
-      message.channel.send(CodAre);
+      return message.channel.send(advmuqio);
     })
-  
- 
-  
-.catch(err =>
-  
-       
-      console.log(err)
-    );
   
 };
 exports.config = {
-  name: "sunucu",
+  name: "richroleplay",
   aliases:[]
 };
-
-//Clip Abipaylaştı sağda solda yaydım diye gezinmeyin 
